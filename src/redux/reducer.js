@@ -1,7 +1,7 @@
 import { INPUT_DATA_SEND } from "./actions";
 
 const initState = {
-	data: "",
+	data: 0,
 };
 
 export const reducer = (store = initState, { type, payload }) => {

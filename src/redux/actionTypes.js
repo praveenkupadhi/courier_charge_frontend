@@ -10,6 +10,11 @@ export const inputData = (data) => {
 	return (dispatch) => {
 		return axios
 			.post("http://localhost:3001", data)
-			.then((res) => console.log(res));
+			.then((res) => {
+				dispatch(inputDataSend(res.data));
+			})
+			.catch((error) => {
+				alert("Pincode not found");
+			});
 	};
 };
